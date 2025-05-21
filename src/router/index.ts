@@ -1,6 +1,5 @@
-import HomeView from '@/views/HomeView.vue' 
-import ProjectsView from '@/views/ProjectsView.vue'
 import { createRouter, createWebHistory } from 'vue-router'
+import HomeView from '@/views/HomeView.vue' 
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,12 +9,17 @@ const router = createRouter({
         name : "Home",
         component : HomeView
       },
+       /**
+         * import callback function
+         * it download  js to provide projects components for only this page 
+         */
       {
         path : '/projects',
         name : "Projects",
-        component : ProjectsView 
+        component : () => import('@/views/ProjectsView.vue') 
       }
   ],
 })
 
 export default router
+
