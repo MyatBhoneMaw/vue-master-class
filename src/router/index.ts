@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { h } from 'vue'
 import HomeView from '@/views/HomeView.vue' 
 
 const router = createRouter({
@@ -22,6 +23,18 @@ const router = createRouter({
         path : '/projects/:id',
         name : "SingleProjectView",
         component : () => import('@/views/SingleProjectView.vue')
+      },
+      /**
+       *path : '/:catchAll(.*)*',
+        *path : '/projects:catchAll(.*)*',   this is for only projects
+        * catchAll route and undefine route,
+        * 404 not found
+        * h() is support html from javascript 
+       */
+      {
+        path : '/:catchAll(.*)*',
+        name : 'NotFound',
+        component : h('p', {style : 'color : red;'}, '404 Not Found')
       }
   ],
 })
