@@ -1,33 +1,20 @@
-<template>
-    <div>
-        <h1>Home Page</h1>
-        <RouterLink :to="{name : '/projects/[id]', params : { id : 1} }">Go To Project 1</RouterLink>
-    </div>
-</template>
+<script setup lang="ts">
+import { supabase } from '@/lib/supabaseClient'
+;(async () => {
+  const { data, error } = await supabase.from('projects').select()
 
-<script setup>
-import { supabase } from '@/lib/supabaseClient';
-import { onMounted } from 'vue';
-
-const getporjects = async () => {
-    const { data , error } = await supabase.from('projects').select();
-
-    if(error) {
-        console.log("Error is Here", error);
-    }
-
-    console.log(data);
-}
-
-onMounted(() => {
-    getporjects()
-})
-
+  if (error) console.log(error)
+  
+  return data
+})()
 </script>
 
-<style lang="css" scoped>
-
-</style>
+<template>
+  <div>
+    <h1>Home Page</h1>
+    <RouterLink :to="{ name: '/projects/[id]', params: { id: 1 } }">Go to Project 1</RouterLink>
+  </div>
+</template>
 
 
 
