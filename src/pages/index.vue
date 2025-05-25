@@ -6,6 +6,22 @@
 </template>
 
 <script setup>
+import { supabase } from '@/lib/supabaseClient';
+import { onMounted } from 'vue';
+
+const getporjects = async () => {
+    const { data , error } = await supabase.from('projects').select();
+
+    if(error) {
+        console.log("Error is Here", error);
+    }
+
+    console.log(data);
+}
+
+onMounted(() => {
+    getporjects()
+})
 
 </script>
 
