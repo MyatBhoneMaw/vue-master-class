@@ -14,7 +14,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 <template>
   <nav class="h-16 border-b border-gray-900 bg-muted/40 flex justify-between px-6 items-center">
     <form class="w-full max-w-96">
-      <Input class="w-full pl-8 bg-background" type="text" placeholder="Search ..." />
+      <Input class="w-full pl-8 bg-gray-500" type="text" placeholder="Search ..." />
     </form>
     <DropdownMenu>
       <DropdownMenuTrigger>
