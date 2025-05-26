@@ -17,7 +17,7 @@ const projects = ref<Tables<'projects'>[] | null>(null);
 </script>
 
 <template>
-    <Button class="border mt-5 bg-cyan-600 py-4 px-4">Click me</Button>
+    <Button>Click me</Button>
 
   <div>
     <h1>Projects Page</h1>
