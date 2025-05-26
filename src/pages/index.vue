@@ -4,7 +4,7 @@
 
 <template>
   <div>
-    <h1>Home Page</h1>
+    <h1 class="py-3 px-4 bg-slate-600 mt-4">Home Page</h1>
     <RouterLink :to="{ name: '/projects/[id]', params: { id: 1 } }">Go to Project 1</RouterLink>
   </div>
 </template>
