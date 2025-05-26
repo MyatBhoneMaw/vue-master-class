@@ -2,6 +2,7 @@
 import { supabase } from '@/lib/supabaseClient'
 import { ref } from 'vue'
 import { Tables } from '../../../database/types';
+import { Button } from '@/components/ui/button';
 
 const projects = ref<Tables<'projects'>[] | null>(null);
 ;(async () => {
@@ -25,4 +26,5 @@ const projects = ref<Tables<'projects'>[] | null>(null);
       </li>
     </ul>
   </div>
+  <Button>Click me</Button>
 </template>
