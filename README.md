@@ -31,3 +31,6 @@ npm run dev
 ```sh
 npm run build
 ```
+
+````````vue unplugin router `````
+https://uvr.esm.is/introduction
