@@ -1,5 +1,6 @@
 <template>
     <RouterLink 
+        exactActiveClass="text-black bg-gray-200"
         v-for="link in links"
         :key="link.title"
         :to="link.to"
@@ -23,6 +24,8 @@ defineProps<{
 
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<!-- <style scoped>
+.router-link-active {
+    background-color : gray;
+}
+</style> -->
