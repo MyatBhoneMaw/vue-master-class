@@ -34,3 +34,6 @@ npm run build
 
 ````````vue unplugin router `````
 https://uvr.esm.is/introduction
+
+/////// vue unplugin components //////
+https://github.com/unplugin/unplugin-vue-components
